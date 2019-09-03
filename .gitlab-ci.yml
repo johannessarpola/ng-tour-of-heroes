@@ -7,17 +7,15 @@ cache:
 
 before_script:
   - npm install
-
+  
 stages:
   - test
 #  - build
 
 tests:
   stage: test
-  script:
-    - ./node_modules/@angular/cli/bin/ng test --progress false --single-run=true --watch=false
+  script: node_modules/.bin/ng test
 
 e2e_tests:
   stage: test
-  script: 
-    - ./node_modules/@angular/cli/bin/ng e2e --progress false --watch=false
+  script: node_modules/.bin/ng e2e
