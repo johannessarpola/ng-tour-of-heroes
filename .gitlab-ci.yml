@@ -6,8 +6,9 @@ cache:
     - node_modules/
 
 before_script:
+  - cd angular-tour-of-heroes
   - npm install
-  
+
 stages:
   - test
 #  - build
