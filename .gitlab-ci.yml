@@ -1,0 +1,17 @@
+image: trion/ng-cli-karma
+
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - test
+#  - build
+
+tests:
+  stage: test
+  script: node_modules/.bin/ng test
+
+e2e_tests:
+  stage: test
+  script: node_modules/.bin/ng e2e
