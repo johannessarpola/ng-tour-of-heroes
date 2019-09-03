@@ -1,8 +1,13 @@
 image: trion/ng-cli-karma
 
 cache:
+  key: ${CI_COMMIT_REF_SLUG}
   paths:
     - node_modules/
+
+before_script:
+  - rm ./package-lock.json
+  - npm install
 
 stages:
   - test
@@ -10,8 +15,10 @@ stages:
 
 tests:
   stage: test
-  script: node_modules/.bin/ng test
+  script:
+    - ./node_modules/@angular/cli/bin/ng test --progress false --single-run=true --watch=false
 
 e2e_tests:
   stage: test
-  script: node_modules/.bin/ng e2e
+  script: 
+    - ./node_modules/@angular/cli/bin/ng e2e --progress false --watch=false
