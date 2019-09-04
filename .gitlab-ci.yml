@@ -19,4 +19,4 @@ tests:
 
 e2e_tests:
   stage: test
-  script: node_modules/.bin/ng e2e --progress false --watch=false
+  script: node_modules/.bin/ng e2e
