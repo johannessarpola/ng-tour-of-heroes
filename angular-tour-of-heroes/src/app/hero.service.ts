@@ -7,12 +7,18 @@ import { catchError, map, tap } from "rxjs/operators";
 
 @Injectable({
   providedIn: "root"
+  /**
+   * When you provide the service at the root level, Angular creates a single, shared instance 
+   * of HeroService and injects it into any class that asks for it. 
+   * Registering the provider in the @Injectable() metadata also allows 
+   * Angular to optimize an app by removing the service from the compiled app if it isn't used.
+   */
 })
 export class HeroService {
   constructor(
     private http: HttpClient,
     private messageService: MessageService
-  ) {}
+  ) { }
 
   httpOptions = {
     headers: new HttpHeaders({ "Content-Type": "application/json" })
