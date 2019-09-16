@@ -10,13 +10,21 @@ import { HeroService } from "../hero.service";
 @Component({
   selector: "app-hero-search",
   templateUrl: "./hero-search.component.html",
-  styleUrls: ["./hero-search.component.css"]
+  styleUrls: ["./hero-search.component.css"],
+  providers: [],
+  /*
+  When you register a provider at the component level, 
+  you get a new instance of the service with each new 
+  instance of that component. At the component level, register 
+  a service provider in the providers property of the @Component() metadata
+  */
+
 })
 export class HeroSearchComponent implements OnInit {
   heroes$: Observable<Hero[]>;
   private searchTerms = new Subject<string>();
 
-  constructor(private heroService: HeroService) {}
+  constructor(private heroService: HeroService) { }
 
   // Push a search term into the observable stream.
   search(term: string): void {

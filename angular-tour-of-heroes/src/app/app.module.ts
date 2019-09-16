@@ -21,7 +21,9 @@ import { BadGuysModule } from "./bad-guys/bad-guys.module";
     MessagesComponent,
     DashboardComponent,
     HeroSearchComponent
-  ],
+  ], // declarations: The components, directives, and pipes that belong to this NgModule.
+  exports: [],  // exports: The subset of declarations that should be visible and usable in the
+  // component templates of other NgModules.
   imports: [
     BrowserModule,
     FormsModule,
@@ -32,7 +34,15 @@ import { BadGuysModule } from "./bad-guys/bad-guys.module";
       dataEncapsulation: false
     })
   ],
-  providers: [],
+  providers: [],  // providers: Creators of services that this NgModule contributes to the global collection of services;
+  // they become accessible in all parts of the app. (You can also specify providers at the component level,
+  // which is often preferred.)
+  
+  /*
+  When you register a provider with a specific NgModule, the same instance of a service is
+   available to all components in that NgModule. To register at this level, 
+   use the providers property of the @NgModule() decorator
+  */
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
