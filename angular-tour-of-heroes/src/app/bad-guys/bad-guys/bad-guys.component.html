@@ -1,12 +1,20 @@
 <div class="badguys">
   <ul class="badguys-list">
     <li *ngFor="let badguy of badguys">
-      <!-- <a routerLink="/badguys/detail/{{ badguy.id }}"> -->
-      <span class="badge">{{ badguy.id }}</span> {{ badguy.name }}
-      <!-- </a> -->
-      <button class="delete" title="delete hero" (click)="delete(badguy)">
-        x
-      </button>
+      <div [ngSwitch]="badguy?.masterPlan">
+        <div *ngSwitchCase="'UniverseExtinction'" appRealthreat>
+          <span class="badge"> {{ badguy.id }}</span> ️⚠️ {{ badguy.name }} ⚠️
+          <button class="delete" title="delete hero" (click)="delete(badguy)">
+            x
+          </button>
+        </div>
+        <div *ngSwitchDefault>
+          <span class="badge">{{ badguy.id }}</span> {{ badguy.name }}
+          <button class="delete" title="delete hero" (click)="delete(badguy)">
+            x
+          </button>
+        </div>
+      </div>
     </li>
   </ul>
 </div>

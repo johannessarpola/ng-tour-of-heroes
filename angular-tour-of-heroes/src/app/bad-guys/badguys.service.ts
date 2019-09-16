@@ -9,7 +9,11 @@ export class BadguysService {
   constructor() {}
 
   getBadGuys(): Observable<Badguy> {
-    const thanos: Badguy = { id: 1, name: "Thanos", masterPlan: "Extinction" };
+    const thanos: Badguy = {
+      id: 1,
+      name: "Thanos",
+      masterPlan: "UniverseExtinction"
+    };
     const loki: Badguy = { id: 2, name: "Loki", masterPlan: "AcquirePower" };
 
     const observable = Observable.create(subscriber => {
