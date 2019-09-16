@@ -8,8 +8,18 @@ import { Badguy } from "./badguy";
 export class BadguysService {
   constructor() {}
 
-  getBadGuys(): Observable<Badguy[]> {
-    const bg: Badguy = { id: 1, name: "name", masterPlan: "noplan" };
-    return of([bg, bg]);
+  getBadGuys(): Observable<Badguy> {
+    const thanos: Badguy = { id: 1, name: "Thanos", masterPlan: "Extinction" };
+    const loki: Badguy = { id: 2, name: "Loki", masterPlan: "AcquirePower" };
+
+    const observable = Observable.create(subscriber => {
+      subscriber.next(thanos);
+      setTimeout(() => {
+        subscriber.next(loki);
+        subscriber.complete();
+      }, 2000);
+    });
+
+    return observable;
   }
 }

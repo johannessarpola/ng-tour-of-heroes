@@ -9,15 +9,15 @@ import { Badguy } from "../badguy";
 })
 export class BadGuysComponent implements OnInit {
   constructor(private badGuyService: BadguysService) {}
-  badguys: Badguy[];
+  badguys: Badguy[] = [];
 
   delete() {
     console.log("delete()");
   }
 
   ngOnInit() {
-    this.badGuyService.getBadGuys().subscribe(bgs => {
-      this.badguys = bgs;
+    this.badGuyService.getBadGuys().subscribe(bg => {
+      this.badguys.push(bg);
     });
   }
 }
