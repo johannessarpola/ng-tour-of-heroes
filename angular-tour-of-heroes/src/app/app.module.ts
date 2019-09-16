@@ -11,7 +11,7 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { InMemoryDataService } from "./in-memory-data.service";
 import { HeroSearchComponent } from "./hero-search/hero-search.component";
-import { BadGuysModule } from "./bad-guys/bad-guys.module";
+import { BadguysModule } from "./bad-guys/bad-guys.module";
 
 @NgModule({
   declarations: [
@@ -29,7 +29,7 @@ import { BadGuysModule } from "./bad-guys/bad-guys.module";
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    BadGuysModule,
+    BadguysModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false
     })
@@ -37,7 +37,7 @@ import { BadGuysModule } from "./bad-guys/bad-guys.module";
   providers: [],  // providers: Creators of services that this NgModule contributes to the global collection of services;
   // they become accessible in all parts of the app. (You can also specify providers at the component level,
   // which is often preferred.)
-  
+
   /*
   When you register a provider with a specific NgModule, the same instance of a service is
    available to all components in that NgModule. To register at this level, 

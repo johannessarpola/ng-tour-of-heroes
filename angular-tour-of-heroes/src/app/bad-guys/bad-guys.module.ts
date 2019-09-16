@@ -1,12 +1,13 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { BadGuysComponent } from "./bad-guys/bad-guys.component";
+import { BadguysComponent } from "./bad-guys.component";
 import { BadguysService } from "./badguys.service";
 import { RealthreatDirective } from './realthreat.directive';
 
 @NgModule({
-  declarations: [BadGuysComponent, RealthreatDirective],
+  declarations: [BadguysComponent, RealthreatDirective],
   imports: [CommonModule],
-  providers: [BadguysService]
+  providers: [BadguysService],
+  exports: [BadguysComponent]
 })
-export class BadGuysModule {}
+export class BadguysModule { }

@@ -1,31 +1,31 @@
-import { Injectable } from "@angular/core";
-import { Observable, of } from "rxjs";
-import { Badguy } from "./badguy";
-import { timeout } from "rxjs/operators";
+import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { Badguy } from './badguy';
+import { timeout } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class BadguysService {
-  constructor() {}
+  constructor() { }
 
   getBadGuys(): Observable<Badguy> {
     const thanos: Badguy = {
       id: 1,
-      name: "Thanos",
-      masterPlan: "UniverseExtinction"
+      name: 'Thanos',
+      masterPlan: 'UniverseExtinction'
     };
-    const loki: Badguy = { id: 2, name: "Loki", masterPlan: "AcquirePower" };
-    const hel: Badguy = { id: 3, name: "Hel", masterPlan: "ConquerÅsgard" };
+    const loki: Badguy = { id: 2, name: 'Loki', masterPlan: 'AcquirePower' };
+    const hel: Badguy = { id: 3, name: 'Hel', masterPlan: 'ConquerÅsgard' };
     const galactus: Badguy = {
       id: 4,
-      name: "Galactus",
-      masterPlan: "GalacticDomination"
+      name: 'Galactus',
+      masterPlan: 'GalacticDomination'
     };
     const ultron: Badguy = {
       id: 5,
-      name: "Ultron",
-      masterPlan: "TooSlowToMatter"
+      name: 'Ultron',
+      masterPlan: 'TooSlowToMatter'
     };
 
     const observable = Observable.create(subscriber => {

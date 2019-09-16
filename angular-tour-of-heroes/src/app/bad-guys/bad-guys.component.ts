@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { BadguysService } from "../badguys.service";
-import { Badguy } from "../badguy";
+import { BadguysService } from "./badguys.service";
+import { Badguy } from "./badguy";
 import { timeout, takeWhile, takeUntil } from "rxjs/operators";
 import { timer } from "rxjs";
 
@@ -9,8 +9,8 @@ import { timer } from "rxjs";
   templateUrl: "./bad-guys.component.html",
   styleUrls: ["./bad-guys.component.css"]
 })
-export class BadGuysComponent implements OnInit {
-  constructor(private badGuyService: BadguysService) {}
+export class BadguysComponent implements OnInit {
+  constructor(private badGuyService: BadguysService) { }
   badguys: Badguy[] = [];
   extinctionColor: "red";
   dominationColor: "violet";

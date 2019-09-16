@@ -12,6 +12,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { HttpClientModule } from "@angular/common/http";
 import { HeroService } from "./hero.service";
 import { MessageService } from "./message.service";
+import { BadguysModule } from './bad-guys/bad-guys.module';
 
 describe("AppComponent", () => {
   beforeEach(async(() => {
@@ -29,7 +30,8 @@ describe("AppComponent", () => {
         FormsModule,
         AppRoutingModule,
         RouterTestingModule.withRoutes([]),
-        HttpClientModule
+        HttpClientModule,
+        BadguysModule
       ],
       providers: [HeroService, MessageService]
     }).compileComponents();
