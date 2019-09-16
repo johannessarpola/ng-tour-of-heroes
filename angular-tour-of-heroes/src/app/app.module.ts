@@ -10,7 +10,8 @@ import { AppRoutingModule } from "./app-routing.module";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { InMemoryDataService } from "./in-memory-data.service";
-import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { HeroSearchComponent } from "./hero-search/hero-search.component";
+import { BadGuysModule } from "./bad-guys/bad-guys.module";
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    BadGuysModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false
     })

@@ -1,0 +1,12 @@
+<div class="badguys">
+  <ul class="badguys-list">
+    <li *ngFor="let badguy of badguys">
+      <!-- <a routerLink="/badguys/detail/{{ badguy.id }}"> -->
+      <span class="badge">{{ badguy.id }}</span> {{ badguy.name }}
+      <!-- </a> -->
+      <button class="delete" title="delete hero" (click)="delete(badguy)">
+        x
+      </button>
+    </li>
+  </ul>
+</div>
