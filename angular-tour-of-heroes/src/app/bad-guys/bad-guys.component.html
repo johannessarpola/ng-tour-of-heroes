@@ -31,3 +31,22 @@
     </li>
   </ul>
 </div>
+<br />
+
+<h2>
+  Select a badguy to deal with
+  <p>
+    (<label
+      ><input type="checkbox" checked (change)="maxPower = !maxPower" />Show
+      villains with maximum power level</label
+    >)
+  </p>
+</h2>
+
+<select [(ngModel)]="badguy">
+  <ng-container *ngFor="let badguy of badguys">
+    <ng-container *ngIf="maxPower || badguy.powerLevel >= 100">
+      <option [ngValue]="badguy">{{ badguy.name }} </option>
+    </ng-container>
+  </ng-container>
+</select>

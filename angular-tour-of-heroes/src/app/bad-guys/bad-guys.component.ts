@@ -10,10 +10,12 @@ import { timer } from "rxjs";
   styleUrls: ["./bad-guys.component.css"]
 })
 export class BadguysComponent implements OnInit {
-  constructor(private badGuyService: BadguysService) { }
+  constructor(private badGuyService: BadguysService) {}
   badguys: Badguy[] = [];
+  badguy: Badguy;
   extinctionColor: "red";
   dominationColor: "violet";
+  maxPower: boolean;
 
   delete() {
     console.log("delete()");
