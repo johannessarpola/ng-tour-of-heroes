@@ -16,6 +16,8 @@ export class BadguysComponent implements OnInit {
   extinctionColor: "red";
   dominationColor: "violet";
   maxPower: boolean;
+  conditionFalse = false;
+  conditionTrue = true;
 
   delete() {
     console.log("delete()");

@@ -31,7 +31,7 @@
     </li>
   </ul>
 </div>
-<br />
+<hr />
 
 <h2>
   Select a badguy to deal with
@@ -50,3 +50,31 @@
     </ng-container>
   </ng-container>
 </select>
+
+<hr />
+
+<h2>Unless structural directive</h2>
+<p *appUnless="conditionFalse" class="unless a">
+  (A) This paragraph is displayed because the condition is false.
+</p>
+
+<p *appUnless="!conditionTrue" class="unless b">
+  (B) Although the condition is true, this paragraph is displayed because
+  appUnless is set to false.
+</p>
+
+<h3>UnlessDirective with template</h3>
+
+<p *appUnless="conditionFalse">
+  Show this sentence unless the condition is true.
+</p>
+
+<p *appUnless="conditionFalse" class="code unless">
+  (A) &lt;p *appUnless="condition" class="code unless"&gt;
+</p>
+
+<ng-template [appUnless]="conditionFalse">
+  <p class="code unless">
+    (A) &lt;ng-template [appUnless]="condition"&gt;
+  </p>
+</ng-template>

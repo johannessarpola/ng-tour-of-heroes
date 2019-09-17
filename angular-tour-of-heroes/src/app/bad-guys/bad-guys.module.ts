@@ -4,9 +4,10 @@ import { BadguysComponent } from "./bad-guys.component";
 import { BadguysService } from "./badguys.service";
 import { RealthreatDirective } from "./realthreat.directive";
 import { FormsModule } from "@angular/forms";
+import { UnlessDirective } from "./unless.directive";
 
 @NgModule({
-  declarations: [BadguysComponent, RealthreatDirective],
+  declarations: [BadguysComponent, RealthreatDirective, UnlessDirective],
   imports: [CommonModule, FormsModule],
   providers: [BadguysService],
   exports: [BadguysComponent]
