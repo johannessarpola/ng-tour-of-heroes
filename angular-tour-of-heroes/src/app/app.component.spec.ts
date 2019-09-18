@@ -14,6 +14,20 @@ import { HeroService } from "./hero.service";
 import { MessageService } from "./message.service";
 import { BadguysModule } from "./bad-guys/bad-guys.module";
 import { LifecycleComponent } from "./lifecycle/lifecycle.component";
+import { TickerComponent } from "./ticker/ticker.component";
+import { TickerService } from "./ticker.service";
+import { Observable } from "rxjs";
+
+class MockTickerService {
+  constructor() {}
+  getTicker(start: number) {
+    return Observable.create(subs => {
+      subs.next(1);
+      subs.next(2);
+      subs.next(3);
+    });
+  }
+}
 
 describe("AppComponent", () => {
   beforeEach(async(() => {
@@ -25,7 +39,8 @@ describe("AppComponent", () => {
         MessagesComponent,
         DashboardComponent,
         HeroSearchComponent,
-        LifecycleComponent
+        LifecycleComponent,
+        TickerComponent
       ],
       imports: [
         BrowserModule,
@@ -36,7 +51,11 @@ describe("AppComponent", () => {
         BadguysModule,
         ReactiveFormsModule
       ],
-      providers: [HeroService, MessageService]
+      providers: [
+        HeroService,
+        MessageService,
+        { provide: TickerService, useClass: MockTickerService }
+      ]
     }).compileComponents();
   }));
 

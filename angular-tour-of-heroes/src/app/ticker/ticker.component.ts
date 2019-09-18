@@ -12,8 +12,7 @@ import { Observable, Subscription } from "rxjs";
 @Component({
   selector: "app-ticker",
   templateUrl: "./ticker.component.html",
-  styleUrls: ["./ticker.component.css"],
-  providers: [TickerService]
+  styleUrls: ["./ticker.component.css"]
 })
 export class TickerComponent implements OnInit, OnChanges, OnDestroy {
   constructor(private tickerService: TickerService) {}
@@ -32,12 +31,12 @@ export class TickerComponent implements OnInit, OnChanges, OnDestroy {
       this.currentTick = v;
     });
   }
-  startAt(n: number) {
+  startAt(n: number): void {
     this.startTick = n;
     this.createTicker();
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.createTicker();
   }
 
