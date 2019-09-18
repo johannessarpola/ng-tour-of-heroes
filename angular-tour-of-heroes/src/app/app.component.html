@@ -8,3 +8,7 @@
 <app-messages></app-messages>
 <hr />
 <app-lifecycle></app-lifecycle>
+<hr />
+<input type="number" #startTick />
+
+<app-ticker [startTick]="startTick.value"></app-ticker>

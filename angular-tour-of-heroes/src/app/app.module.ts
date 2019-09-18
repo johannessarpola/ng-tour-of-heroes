@@ -13,6 +13,7 @@ import { InMemoryDataService } from "./in-memory-data.service";
 import { HeroSearchComponent } from "./hero-search/hero-search.component";
 import { BadguysModule } from "./bad-guys/bad-guys.module";
 import { LifecycleComponent } from "./lifecycle/lifecycle.component";
+import { TickerComponent } from './ticker/ticker.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LifecycleComponent } from "./lifecycle/lifecycle.component";
     MessagesComponent,
     DashboardComponent,
     HeroSearchComponent,
-    LifecycleComponent
+    LifecycleComponent,
+    TickerComponent
   ], // declarations: The components, directives, and pipes that belong to this NgModule.
   exports: [], // exports: The subset of declarations that should be visible and usable in the
   // component templates of other NgModules.

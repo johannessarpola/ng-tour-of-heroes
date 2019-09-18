@@ -1,5 +1,6 @@
 import { Component, OnInit, SimpleChanges } from "@angular/core";
 import { FormBuilder, FormGroup, FormControl } from "@angular/forms";
+import { debounceTime } from "rxjs/operators";
 
 @Component({
   selector: "app-lifecycle",
@@ -16,9 +17,6 @@ export class LifecycleComponent implements OnInit {
   }
 
   detailsForm: FormGroup;
-  firstName: string;
-  lastName: string;
-  email: string;
   submitted = false;
 
   onSubmit() {
@@ -31,6 +29,12 @@ export class LifecycleComponent implements OnInit {
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
+    this.detailsForm.valueChanges
+      .pipe(debounceTime(300))
+      .subscribe(subscription => {
+        console.log("detailsForm subscription");
+        console.log(subscription);
+      });
     console.log("ngOnInit");
   }
   // ngDoCheck(): void {
@@ -45,23 +49,23 @@ export class LifecycleComponent implements OnInit {
     console.log("ngOnDestroy");
   }
 
-  ngAfterContentChecked(): void {
+  /*   ngAfterContentChecked(): void {
     //Called after every check of the component's or directive's content.
     //Add 'implements AfterContentChecked' to the class.
     console.log("ngAfterContentChecked");
-  }
+  } */
   ngAfterContentInit(): void {
     //Called after ngOnInit when the component's or directive's content has been initialized.
     //Add 'implements AfterContentInit' to the class.
     console.log("ngAfterContentInit");
   }
 
-  ngAfterViewChecked(): void {
+  /*   ngAfterViewChecked(): void {
     //Called after every check of the component's view. Applies to components only.
     //Add 'implements AfterViewChecked' to the class.
     console.log("ngAfterViewChecked");
   }
-
+ */
   ngAfterViewInit(): void {
     //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
     //Add 'implements AfterViewInit' to the class.
