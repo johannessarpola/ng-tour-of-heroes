@@ -7,12 +7,13 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 import { HeroSearchComponent } from "./hero-search/hero-search.component";
 import { BrowserModule } from "@angular/platform-browser";
 import { RouterTestingModule } from "@angular/router/testing";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AppRoutingModule } from "./app-routing.module";
 import { HttpClientModule } from "@angular/common/http";
 import { HeroService } from "./hero.service";
 import { MessageService } from "./message.service";
-import { BadguysModule } from './bad-guys/bad-guys.module';
+import { BadguysModule } from "./bad-guys/bad-guys.module";
+import { LifecycleComponent } from "./lifecycle/lifecycle.component";
 
 describe("AppComponent", () => {
   beforeEach(async(() => {
@@ -23,7 +24,8 @@ describe("AppComponent", () => {
         HeroDetailComponent,
         MessagesComponent,
         DashboardComponent,
-        HeroSearchComponent
+        HeroSearchComponent,
+        LifecycleComponent
       ],
       imports: [
         BrowserModule,
@@ -31,7 +33,8 @@ describe("AppComponent", () => {
         AppRoutingModule,
         RouterTestingModule.withRoutes([]),
         HttpClientModule,
-        BadguysModule
+        BadguysModule,
+        ReactiveFormsModule
       ],
       providers: [HeroService, MessageService]
     }).compileComponents();

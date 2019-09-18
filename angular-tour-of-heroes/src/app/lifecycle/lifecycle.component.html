@@ -1,0 +1,24 @@
+<p>lifecycle works!</p>
+<div>
+  <form [formGroup]="detailsForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>First name:</label>
+      <input type="text" class="form-control" formControlName="firstName" />
+    </div>
+    <div class="form-group">
+      <label>last name:</label>
+      <input type="text" class="form-control" formControlName="lastName" />
+    </div>
+    <div class="form-group">
+      <label>email: </label>
+      <input type="text" class="form-control" formControlName="email" />
+    </div>
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="!detailsForm.valid"
+    >
+      Submit
+    </button>
+  </form>
+</div>
