@@ -1,4 +1,11 @@
-import { Component, OnInit, OnChanges, OnDestroy, Input } from "@angular/core";
+import {
+  Component,
+  OnInit,
+  OnChanges,
+  OnDestroy,
+  Input,
+  SimpleChanges
+} from "@angular/core";
 import { TickerService } from "../ticker.service";
 import { Observable, Subscription } from "rxjs";
 
