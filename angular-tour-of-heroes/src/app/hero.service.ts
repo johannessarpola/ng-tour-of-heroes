@@ -8,9 +8,9 @@ import { catchError, map, tap } from "rxjs/operators";
 @Injectable({
   providedIn: "root"
   /**
-   * When you provide the service at the root level, Angular creates a single, shared instance 
-   * of HeroService and injects it into any class that asks for it. 
-   * Registering the provider in the @Injectable() metadata also allows 
+   * When you provide the service at the root level, Angular creates a single, shared instance
+   * of HeroService and injects it into any class that asks for it.
+   * Registering the provider in the @Injectable() metadata also allows
    * Angular to optimize an app by removing the service from the compiled app if it isn't used.
    */
 })
@@ -18,7 +18,7 @@ export class HeroService {
   constructor(
     private http: HttpClient,
     private messageService: MessageService
-  ) { }
+  ) {}
 
   httpOptions = {
     headers: new HttpHeaders({ "Content-Type": "application/json" })
@@ -79,7 +79,7 @@ export class HeroService {
     const id = typeof hero === "number" ? hero : hero.id;
     const url = `${this.heroesUrl}/${id}`;
     return this.http.delete<Hero>(url, this.httpOptions).pipe(
-      tap((newHero: Hero) => this.log(`added hero w/ id=${newHero.id}`)),
+      tap(_ => this.log(`removved hero w/ id=${hero.id}`)),
       catchError(this.handleError<Hero>("removeHero"))
     );
   }
