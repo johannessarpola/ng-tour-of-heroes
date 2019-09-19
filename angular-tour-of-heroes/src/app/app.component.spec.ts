@@ -17,6 +17,7 @@ import { LifecycleComponent } from "./lifecycle/lifecycle.component";
 import { TickerComponent } from "./ticker/ticker.component";
 import { TickerService } from "./ticker.service";
 import { Observable } from "rxjs";
+import { LevelUpComponent } from "./heroes/level-up/level-up.component";
 
 class MockTickerService {
   constructor() {}
@@ -40,7 +41,8 @@ describe("AppComponent", () => {
         DashboardComponent,
         HeroSearchComponent,
         LifecycleComponent,
-        TickerComponent
+        TickerComponent,
+        LevelUpComponent
       ],
       imports: [
         BrowserModule,

@@ -7,6 +7,7 @@ import { FormsModule } from "@angular/forms";
 import { RouterTestingModule } from "@angular/router/testing";
 import { HttpClientModule } from "@angular/common/http";
 import { MessageService } from "../message.service";
+import { LevelUpComponent } from "./level-up/level-up.component";
 
 describe("HeroesComponent", () => {
   let component: HeroesComponent;
@@ -14,7 +15,7 @@ describe("HeroesComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [HeroesComponent, HeroSearchComponent],
+      declarations: [HeroesComponent, LevelUpComponent, HeroSearchComponent],
       imports: [
         FormsModule,
         RouterTestingModule.withRoutes([]),
