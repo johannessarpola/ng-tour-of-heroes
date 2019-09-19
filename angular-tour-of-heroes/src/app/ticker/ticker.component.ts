@@ -17,7 +17,13 @@ import { Observable, Subscription } from "rxjs";
 export class TickerComponent implements OnInit, OnChanges, OnDestroy {
   constructor(private tickerService: TickerService) {}
 
-  @Input() startTick: number = 1;
+  _startTick: number;
+
+  @Input()
+  set startTick(n: number) {
+    this._startTick = n || 1;
+  }
+
   ticker: Observable<number>;
   tickerSubscription: Subscription;
   currentTick: number;
