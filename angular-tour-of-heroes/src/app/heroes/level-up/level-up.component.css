@@ -1,0 +1,9 @@
+span {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.4em;
+}
+span:hover {
+  color: red;
+  text-decoration: underline;
+}

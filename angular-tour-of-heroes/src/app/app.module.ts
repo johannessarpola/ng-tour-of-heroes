@@ -14,6 +14,7 @@ import { HeroSearchComponent } from "./hero-search/hero-search.component";
 import { BadguysModule } from "./bad-guys/bad-guys.module";
 import { LifecycleComponent } from "./lifecycle/lifecycle.component";
 import { TickerComponent } from "./ticker/ticker.component";
+import { LevelUpComponent } from './heroes/level-up/level-up.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TickerComponent } from "./ticker/ticker.component";
     DashboardComponent,
     HeroSearchComponent,
     LifecycleComponent,
-    TickerComponent
+    TickerComponent,
+    LevelUpComponent
   ], // declarations: The components, directives, and pipes that belong to this NgModule.
   exports: [], // exports: The subset of declarations that should be visible and usable in the
   // component templates of other NgModules.

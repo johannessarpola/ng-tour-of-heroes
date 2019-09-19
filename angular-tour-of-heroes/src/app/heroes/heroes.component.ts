@@ -26,6 +26,15 @@ export class HeroesComponent implements OnInit {
     });
   }
 
+  onlevelUp(hero: Hero) {
+    hero.level = hero.level + 1;
+
+    this.heroService.updateHero(hero).subscribe(_ => {
+      this.heroes = this.heroes.filter(h => h.id !== hero.id);
+      this.heroes.push(hero);
+    });
+  }
+
   delete(hero: Hero): void {
     this.heroes = this.heroes.filter(h => h !== hero);
     this.heroService.deleteHero(hero).subscribe();
