@@ -14,31 +14,36 @@ export class BadguysService {
       id: 1,
       name: "Thanos",
       masterPlan: "UniverseExtinction",
-      powerLevel: 110
+      powerLevel: 110,
+      level: 99
     };
     const loki: Badguy = {
       id: 2,
       name: "Loki",
       masterPlan: "AcquirePower",
-      powerLevel: 50
+      powerLevel: 50,
+      level: 32
     };
     const hel: Badguy = {
       id: 3,
       name: "Hel",
       masterPlan: "ConquerÅsgard",
-      powerLevel: 50
+      powerLevel: 50,
+      level: 57
     };
     const galactus: Badguy = {
       id: 4,
       name: "Galactus",
       masterPlan: "GalacticDomination",
-      powerLevel: 100
+      powerLevel: 100,
+      level: 99
     };
     const ultron: Badguy = {
       id: 5,
       name: "Ultron",
       masterPlan: "TooSlowToMatter",
-      powerLevel: 10
+      powerLevel: 10,
+      level: 9
     };
 
     const observable = Observable.create(subscriber => {

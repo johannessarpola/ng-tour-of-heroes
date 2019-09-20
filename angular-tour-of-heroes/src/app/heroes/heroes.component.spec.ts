@@ -7,7 +7,7 @@ import { FormsModule } from "@angular/forms";
 import { RouterTestingModule } from "@angular/router/testing";
 import { HttpClientModule } from "@angular/common/http";
 import { MessageService } from "../message.service";
-import { LevelUpComponent } from "./level-up/level-up.component";
+import { LevelUpComponent } from "../level-up/level-up.component";
 
 describe("HeroesComponent", () => {
   let component: HeroesComponent;

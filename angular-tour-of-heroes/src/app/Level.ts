@@ -1,0 +1,3 @@
+interface HasLevel {
+  level: number;
+}

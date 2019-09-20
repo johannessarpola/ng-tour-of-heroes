@@ -1,4 +1,5 @@
-export class Badguy {
+export class Badguy implements HasLevel {
+  level: number;
   id: number;
   name: string;
   masterPlan: string;

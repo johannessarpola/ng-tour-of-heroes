@@ -1,13 +1,14 @@
 {
-    "editor.formatOnSave": true,
-    "workbench.colorCustomizations": {
-        "titleBar.activeBackground": "#98e7bb",
-        "titleBar.inactiveBackground": "#98e7bb99",
-        "titleBar.activeForeground": "#15202b",
-        "titleBar.inactiveForeground": "#15202b99",
-        "statusBar.background": "#98e7bb",
-        "statusBarItem.hoverBackground": "#6fdda0",
-        "statusBar.foreground": "#15202b"
-    },
-    "peacock.color": "#98e7bb"
+  "editor.formatOnSave": true,
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#98e7bb",
+    "titleBar.inactiveBackground": "#98e7bb99",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveForeground": "#15202b99",
+    "statusBar.background": "#98e7bb",
+    "statusBarItem.hoverBackground": "#6fdda0",
+    "statusBar.foreground": "#15202b"
+  },
+  "peacock.color": "#98e7bb",
+  "prettier.singleQuote": true
 }

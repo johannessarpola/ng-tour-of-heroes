@@ -1,20 +1,22 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
-import { HttpClientModule } from "@angular/common/http";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { AppComponent } from "./app.component";
-import { HeroesComponent } from "./heroes/heroes.component";
-import { HeroDetailComponent } from "./hero-detail/hero-detail.component";
-import { MessagesComponent } from "./messages/messages.component";
-import { AppRoutingModule } from "./app-routing.module";
-import { DashboardComponent } from "./dashboard/dashboard.component";
-import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
-import { InMemoryDataService } from "./in-memory-data.service";
-import { HeroSearchComponent } from "./hero-search/hero-search.component";
-import { BadguysModule } from "./bad-guys/bad-guys.module";
-import { LifecycleComponent } from "./lifecycle/lifecycle.component";
-import { TickerComponent } from "./ticker/ticker.component";
-import { LevelUpComponent } from './heroes/level-up/level-up.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AppComponent } from './app.component';
+import { HeroesComponent } from './heroes/heroes.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { MessagesComponent } from './messages/messages.component';
+import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
+import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { BadguysModule } from './bad-guys/bad-guys.module';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { TickerComponent } from './ticker/ticker.component';
+import { LevelUpComponent } from './level-up/level-up.component';
+import { LevelUpModule } from './level-up/level-up.module';
+import { HeroComponent } from './heroes/hero/hero.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,7 @@ import { LevelUpComponent } from './heroes/level-up/level-up.component';
     HeroSearchComponent,
     LifecycleComponent,
     TickerComponent,
-    LevelUpComponent
+    HeroComponent
   ], // declarations: The components, directives, and pipes that belong to this NgModule.
   exports: [], // exports: The subset of declarations that should be visible and usable in the
   // component templates of other NgModules.
@@ -36,6 +38,7 @@ import { LevelUpComponent } from './heroes/level-up/level-up.component';
     AppRoutingModule,
     HttpClientModule,
     BadguysModule,
+    LevelUpModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false
     }),

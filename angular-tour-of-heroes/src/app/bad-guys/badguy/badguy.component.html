@@ -1,0 +1,11 @@
+<div>
+  <span class="badge"> {{ badguy.id }}</span> ️{{ dangerEmoji }}
+  {{ badguy.name }} {{ dangerEmoji }}, lvl {{ badguy.level }}
+  <button class="delete" title="delete hero" (click)="delete(badguy)">
+    x
+  </button>
+  <app-level-up
+    [hasLevel]="badguy"
+    (leveledUp)="onlevelUp($event)"
+  ></app-level-up>
+</div>

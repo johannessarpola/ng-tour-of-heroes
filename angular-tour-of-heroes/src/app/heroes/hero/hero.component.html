@@ -1,0 +1,11 @@
+<a routerLink="/detail/{{ hero.id }}">
+  <span class="badge">{{ hero.id }}</span> {{ hero.name }}, {{ hero.level }} lvl
+</a>
+<app-level-up [hasLevel]="hero" (leveledUp)="onLevelUp($event)"></app-level-up>
+<button
+  class="delete btn btn-secondary"
+  title="delete hero"
+  (click)="delete(hero)"
+>
+  x
+</button>

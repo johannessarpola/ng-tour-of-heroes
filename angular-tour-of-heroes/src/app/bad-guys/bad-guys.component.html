@@ -6,26 +6,28 @@
           *ngSwitchCase="'UniverseExtinction'"
           [appRealthreat]="extinctionColor"
         >
-          <span class="badge"> {{ badguy.id }}</span> ️⚠️ {{ badguy.name }} ⚠️
-          <button class="delete" title="delete hero" (click)="delete(badguy)">
-            x
-          </button>
+          <app-badguy
+            dangerEmoji="⚠️"
+            [badguy]="badguy"
+            [appRealthreat]="extinctionColor"
+          ></app-badguy>
         </div>
         <div
           *ngSwitchCase="'GalacticDomination'"
           [appRealthreat]="dominationColor"
           defaultThreatColor="violet"
         >
-          <span class="badge"> {{ badguy.id }}</span> ️🌌 {{ badguy.name }} 🌌
-          <button class="delete" title="delete hero" (click)="delete(badguy)">
-            x
-          </button>
+          <app-badguy
+            dangerEmoji="🌌"
+            [badguy]="badguy"
+            [appRealthreat]="extinctionColor"
+          ></app-badguy>
         </div>
         <div *ngSwitchDefault>
-          <span class="badge">{{ badguy.id }}</span> {{ badguy.name }}
-          <button class="delete" title="delete hero" (click)="delete(badguy)">
-            x
-          </button>
+          <app-badguy
+            [badguy]="badguy"
+            [appRealthreat]="extinctionColor"
+          ></app-badguy>
         </div>
       </div>
     </li>
@@ -52,7 +54,7 @@
 </select>
 
 <hr />
-
+<!--
 <h2>Unless structural directive</h2>
 <p *appUnless="conditionFalse" class="unless a">
   (A) This paragraph is displayed because the condition is false.
@@ -78,3 +80,4 @@
     (A) &lt;ng-template [appUnless]="condition"&gt;
   </p>
 </ng-template>
+ -->
