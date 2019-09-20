@@ -1,9 +1,9 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { DashboardComponent } from "./dashboard.component";
-import { HeroDetailComponent } from "../hero-detail/hero-detail.component";
+import { HeroDetailComponent } from "../heroes/hero-detail/hero-detail.component";
 import { HeroesComponent } from "../heroes/heroes.component";
-import { HeroSearchComponent } from "../hero-search/hero-search.component";
+import { HeroSearchComponent } from "../heroes/hero-search/hero-search.component";
 import { HeroService } from "../hero.service";
 import { MessageService } from "../message.service";
 import { FormsModule } from "@angular/forms";

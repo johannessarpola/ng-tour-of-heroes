@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Hero } from "./hero";
+import { Hero } from "./heroes/hero";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable, of } from "rxjs";
 import { MessageService } from "./message.service";
@@ -18,7 +18,7 @@ export class HeroService {
   constructor(
     private http: HttpClient,
     private messageService: MessageService
-  ) {}
+  ) { }
 
   httpOptions = {
     headers: new HttpHeaders({ "Content-Type": "application/json" })

@@ -4,7 +4,7 @@ import { HeroDetailComponent } from "./hero-detail.component";
 import { FormsModule } from "@angular/forms";
 import { RouterTestingModule } from "@angular/router/testing";
 import { HttpClientModule } from "@angular/common/http";
-import { HeroService } from "../hero.service";
+import { HeroService } from "../../hero.service";
 
 describe("HeroDetailComponent", () => {
   let component: HeroDetailComponent;

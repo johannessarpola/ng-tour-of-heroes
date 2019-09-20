@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { HeroesComponent } from "./heroes.component";
 import { HeroService } from "../hero.service";
-import { HeroSearchComponent } from "../hero-search/hero-search.component";
+import { HeroSearchComponent } from "./hero-search/hero-search.component";
 import { FormsModule } from "@angular/forms";
 import { RouterTestingModule } from "@angular/router/testing";
 import { HttpClientModule } from "@angular/common/http";

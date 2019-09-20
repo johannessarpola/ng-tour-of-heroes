@@ -1,10 +1,10 @@
 import { TestBed, async } from "@angular/core/testing";
 import { AppComponent } from "./app.component";
 import { HeroesComponent } from "./heroes/heroes.component";
-import { HeroDetailComponent } from "./hero-detail/hero-detail.component";
+import { HeroDetailComponent } from "./heroes/hero-detail/hero-detail.component";
 import { MessagesComponent } from "./messages/messages.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
-import { HeroSearchComponent } from "./hero-search/hero-search.component";
+import { HeroSearchComponent } from "./heroes/hero-search/hero-search.component";
 import { BrowserModule } from "@angular/platform-browser";
 import { RouterTestingModule } from "@angular/router/testing";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
@@ -20,7 +20,7 @@ import { Observable } from "rxjs";
 import { LevelUpComponent } from "./level-up/level-up.component";
 
 class MockTickerService {
-  constructor() {}
+  constructor() { }
   getTicker(start: number) {
     return Observable.create(subs => {
       subs.next(1);

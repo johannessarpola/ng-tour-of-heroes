@@ -4,31 +4,28 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { HeroDetailComponent } from './heroes/hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
-import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { HeroSearchComponent } from './heroes/hero-search/hero-search.component';
 import { BadguysModule } from './bad-guys/bad-guys.module';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { TickerComponent } from './ticker/ticker.component';
 import { LevelUpComponent } from './level-up/level-up.component';
 import { LevelUpModule } from './level-up/level-up.module';
 import { HeroComponent } from './heroes/hero/hero.component';
+import { HeroesModule } from './heroes/heroes.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent,
-    HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    HeroSearchComponent,
     LifecycleComponent,
     TickerComponent,
-    HeroComponent
   ], // declarations: The components, directives, and pipes that belong to this NgModule.
   exports: [], // exports: The subset of declarations that should be visible and usable in the
   // component templates of other NgModules.
@@ -38,6 +35,7 @@ import { HeroComponent } from './heroes/hero/hero.component';
     AppRoutingModule,
     HttpClientModule,
     BadguysModule,
+    HeroesModule,
     LevelUpModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false
@@ -55,4 +53,4 @@ import { HeroComponent } from './heroes/hero/hero.component';
   */
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
