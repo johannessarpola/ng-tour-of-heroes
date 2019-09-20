@@ -1,1 +1,11 @@
-<p>arena works!</p>
+<div class="arena">
+
+    <app-opponent></app-opponent>
+    <app-opponent></app-opponent>
+
+</div>
+<div class="fightlog">
+    <ul>
+        <li *ngFor="let msg of history">{{ msg }}</li>
+    </ul>
+</div>

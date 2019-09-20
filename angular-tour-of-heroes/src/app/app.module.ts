@@ -18,6 +18,7 @@ import { LevelUpComponent } from './level-up/level-up.component';
 import { LevelUpModule } from './level-up/level-up.module';
 import { HeroComponent } from './heroes/hero/hero.component';
 import { HeroesModule } from './heroes/heroes.module';
+import { ArenaModule } from './arena/arena.module';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { HeroesModule } from './heroes/heroes.module';
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false
     }),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ArenaModule
   ],
   providers: [], // providers: Creators of services that this NgModule contributes to the global collection of services;
   // they become accessible in all parts of the app. (You can also specify providers at the component level,
